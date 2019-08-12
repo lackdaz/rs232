@@ -12,8 +12,19 @@ void setup() {
 void loop()
 {
  char buffer[4];
- if (RS232Out.available()) {
+ if (RS232Out.available()) 
+ {
    int inByte = RS232Out.read();
-   Serial.println(char(inByte)); 
+   //if(inByte == 45) 
+   {
+    //Serial.println("");
+   }
+   //else
+   {
+    Serial.print(char(inByte)); 
+    Serial.print("["); 
+    Serial.print(inByte); 
+    Serial.print("]"); 
+   }
  }
 }
