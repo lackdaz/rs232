@@ -1,7 +1,6 @@
 #include <SoftwareSerial.h>
 
 SoftwareSerial RS232Out(D4, D3); // RX (red), TX (orange)
-int i = 0;
 
 void setup() {
  Serial.begin(9600);
@@ -14,25 +13,21 @@ void loop()
   int ion_count = Read_Ion_Count();
   Serial.println(ion_count);
 }
+
 int Read_Ion_Count()
 {
  char buffer[4];
  int bufferIndex =0;
- for( int globalIndex = 0; ;)
- {
-   if (RS232Out.available()) 
-   {
+ for( int globalIndex = 0; ;) {
+   if (RS232Out.available()) {
      int inByte = RS232Out.read();
-     if(inByte == 10) 
-     {
+     if(inByte == 10) { // ASCII 10 is LF Line Feed
       break;
      }
-     else if(inByte == 9)
-     {
+     else if(inByte == 9) { // ASCII 9 is Horizontal Tab
       globalIndex++;
      }
-     else if(globalIndex == 3)
-     {
+     else if(globalIndex == 3) { // Store the ion Count values to the buffer
       buffer[bufferIndex] = char(inByte);
       bufferIndex++;
      }
