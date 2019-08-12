@@ -1,0 +1,6 @@
+{
+  "terminal.integrated.env.osx": {
+    "PATH": "/Users/seth/.platformio/penv/bin:/Users/seth/.platformio/penv:/Users/seth/bin:/Users/seth/.local/bin:/anaconda2/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/seth/.pyenv/shims:/Users/seth/code/esp/xtensa-esp32-elf/bin:/Users/seth/.pyenv/bin:/Users/seth/code/google-cloud-sdk/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Wireshark.app/Contents/MacOS:/Users/seth/.platformio/penv/bin:/Users/seth/code/go/go-workspace/bin:/usr/local/opt/go/libexec/bin:/Users/seth/Library/Android/sdk/emulator:/Users/seth/Library/Android/sdk/tools:/Users/seth/Library/Android/sdk/tools/bin:/Applications/Wireshark.app/Contents/MacOS",
+    "PLATFORMIO_CALLER": "vscode"
+  }
+}
