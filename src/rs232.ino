@@ -2,6 +2,7 @@
 
 SoftwareSerial RS232Out(D4, D3); // RX (red), TX (orange)
 int i = 0;
+int globalIndex = 0;
 
 void setup() {
  Serial.begin(9600);
@@ -18,13 +19,18 @@ void loop()
    if(inByte == 10) 
    {
     Serial.println("");
+    globalIndex=0;
+   }
+   else if(inByte == 9) 
+   {
+    globalIndex++;
    }
    else
    {
-    Serial.print(char(inByte)); 
-    //Serial.print("]"); 
-    //Serial.print(inByte); 
-    //Serial.print("]"); 
+    if(globalIndex == 3)
+    {
+      Serial.print(char(inByte)); 
+    }
    }
  }
 }
