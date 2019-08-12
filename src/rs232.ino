@@ -15,16 +15,16 @@ void loop()
  if (RS232Out.available()) 
  {
    int inByte = RS232Out.read();
-   //if(inByte == 45) 
+   if(inByte == 10) 
    {
-    //Serial.println("");
+    Serial.println("");
    }
-   //else
+   else
    {
     Serial.print(char(inByte)); 
-    Serial.print("["); 
-    Serial.print(inByte); 
-    Serial.print("]"); 
+    //Serial.print("]"); 
+    //Serial.print(inByte); 
+    //Serial.print("]"); 
    }
  }
 }
